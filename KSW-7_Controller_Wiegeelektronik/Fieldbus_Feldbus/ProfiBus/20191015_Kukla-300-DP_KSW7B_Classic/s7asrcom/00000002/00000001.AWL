@@ -1,0 +1,86 @@
+//*************************************************************************
+// KUKLA Weighing Technology
+//*************************************************************************
+// default bit-Mask for fieldbus communication
+// KSW-7B
+//*************************************************************************
+
+TYPE UDT400  // Weigh Channel WCxx  "WCxStat1"
+VERSION : 1.0
+   STRUCT
+      bWCx_Warning            :	Bool;   // 24: Warnung
+      bWCx_RdyToOperate       :	Bool;   // 25: Betriebsbereit
+	  bWCx_XD0                :	Bool;   // 26: 
+	  bWCx_XD1                :	Bool;   // 27: 
+	  bWCx_XD2                :	Bool;   // 28: 
+	  bWCx_XD3                :	Bool;   // 29: 
+	  bWCx_Crtl_30            :	Bool;	// 30: ---
+	  bWCx_FieldRelais4       : Bool;   // 31: Fieldrelais 4
+	  bWCx_DriveBolcked       :	Bool;	// 16: Antriebe gesperrt
+	  bWCx_EmcyStopActiv      : Bool;   // 17: Notaus aktiv
+	  bWCx_MainDriveRuns      :	Bool;	// 18: Läuft
+	  bWCx_MainDriveJog       :	Bool;	// 19: Hauptantrieb JOG
+	  bWCx_FieldRelais0       :	Bool;	// 20: Fieldrelais 0
+	  bWCx_FieldRelais1       :	Bool;	// 21: Fieldrelais 1
+	  bWCx_FieldRelais2       :	Bool;	// 22: Fieldrelais 2
+	  bWCx_FieldRelais3	      : Bool;	// 23: Fieldrelais 3
+	  bWCx_BinMaxLevel        :	Bool;	// 08: Max Meldung
+	  bWCx_BinMaxMaxLevel     :	Bool;	// 09: Max Max Meldung
+	  bWCx_BatchWeightFault   :	Bool;	// 10: Mengenfehler
+	  bWCx_Crtl_11            :	Bool;	// 11: ---
+	  bWCx_Crtl_12            :	Bool;	// 12: ---
+	  bWCx_Crtl_13            :	Bool;	// 13: ---
+	  bWCx_ProdRelease        :	Bool;	// 14: Materialfreigabe
+	  bWCx_Remote             :	Bool;	// 15: Remote
+	  bWCx_Crtl_00            :	Bool;	// 00: ---
+	  bWCx_StartBatch         :	Bool;	// 01: Charge Start
+	  bWCx_BatchCoarseStream  :	Bool;	// 02: Charge Grobstrom
+	  bWCx_BatchFineStream    : Bool;	// 03: Charge Feinstrom
+	  bWCx_ReFillingOn        :	Bool;	// 04: Füllen ein
+	  bWCx_BinEmpty           :	Bool;	// 05: Leer
+	  bWCx_BinMinMinLevel     : Bool;	// 06: Min Min Meldung
+	  bWCx_BinMinLevel	      : Bool;	// 07: Min Meldung
+   END_STRUCT;
+END_TYPE
+
+
+
+TYPE UDT420  // "BusCommand"
+VERSION : 1.0
+   STRUCT
+      bWCx_Cmd_FieldOpto4     : Bool;   // 24: Feldopto 4
+      bWCx_Cmd_DriveFault     : Bool;   // 25: Motorstoerung
+      bWCx_Cmd_26             : Bool;   // 26: ---
+      bWCx_Cmd_27             : Bool;   // 27: ---
+      bWCx_Cmd_28             : Bool;   // 28: ---
+      bWCx_Cmd_29             : Bool;   // 29: ---
+      bWCx_Cmd_30             : Bool;   // 30: ---
+      bWCx_Cmd_31             : Bool;   // 31: ---
+      bWCx_Cmd_BlockDrive     : Bool;   // 16: Antriebsperre
+      bWCx_Cmd_EmcyStop       : Bool;   // 17: Notaus is aktiv
+      bWCx_Cmd_DriveIsRuning  : Bool;   // 18: Antrieb läuft Status
+      bWCx_Cmd_DriveJog       : Bool;   // 19: Antrieb Jog aktivieren
+      bWCx_Cmd_FieldOpto0     : Bool;   // 20: Feldopto 0
+      bWCx_Cmd_FieldOpto1     : Bool;   // 21: Feldopto 1
+      bWCx_Cmd_FieldOpto2     : Bool;   // 22: Feldopto 2
+      bWCx_Cmd_FieldOpto3     : Bool;   // 23: Feldopto 3
+      bWCx_Cmd_08             : Bool;   // 08: ---
+      bWCx_Cmd_StartBatch     : Bool;   // 09: Charge starten
+      bWCx_Cmd_InterruptBatch : Bool;   // 10: Charge unterbrechen
+      bWCx_Cmd_CancelBatch    : Bool;   // 11: Charge abbrechen
+      bWCx_Cmd_FineStream     : Bool;   // 12: Feinstrom erzwingen
+      bWCx_Cmd_Emtying        : Bool;   // 13: System entleeren
+      bWCx_Cmd_14             : Bool;   // 14: ---
+      bWCx_Cmd_Remote         : Bool;   // 15: Remote aktivieren
+      bWCx_Cmd_00             : Bool;   // 00: ---
+      bWCx_Cmd_SetZero        : Bool;   // 01: Nullpunkt setzen <0> STARTEN
+      bWCx_Cmd_StartTare      : Bool;   // 02: Tarierung starten
+      bWCx_Cmd_ClrCounterB    : Bool;   // 03: Zähler B zurücksetzen
+      bWCx_Cmd_MaxMaxSensor   : Bool;   // 04: Max Max Sensoreingang
+      bWCx_Cmd_MaxSensor      : Bool;   // 05: Max Sensoreingang
+      bWCx_Cmd_MinSensor      : Bool;   // 06: Min Sensoreingang
+      bWCx_Cmd_MinMinSensor   : Bool;   // 07: Min Min Sensoreingang
+   END_STRUCT;
+END_TYPE
+
+

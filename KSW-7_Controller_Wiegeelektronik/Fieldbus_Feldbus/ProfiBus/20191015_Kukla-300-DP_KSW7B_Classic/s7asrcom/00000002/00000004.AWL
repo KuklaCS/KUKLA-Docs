@@ -1,0 +1,269 @@
+DATA_BLOCK "CMD_KSW"
+TITLE =
+VERSION : 0.0
+
+
+  STRUCT 	
+   KSW7_SET_DW00 : UDT 420;	// P97200 BusIn DW00 - 01:WC00 CMD
+   KSW7_SET_DW04 : DINT;	// P97201 BusIn DW04 - 10: Bus 1 ABS 
+   KSW7_SET_DW08 : UDT 420;	// P97202 BusIn DW08 - 01:WC10 CMD
+   KSW7_SET_DW12 : DINT;	// P97203 BusIn DW12 - 11: Bus 2 ABS 
+   KSW7_SET_DW16 : UDT 420;	// P97204 BusIn DW16 - 01:WC20 CMD 
+   KSW7_SET_DW20 : DINT;	// P97205 BusIn DW20 - 12: Bus 3 ABS 
+   KSW7_SET_DW24 : DINT;	// P97206 BusIn DW24 - 00: ---
+   KSW7_SET_DW28 : DINT;	// P97207 BusIn DW28 - 00: ---
+  END_STRUCT ;	
+BEGIN
+END_DATA_BLOCK
+
+
+DATA_BLOCK "ACT_KSW"
+TITLE =
+VERSION : 0.0
+
+
+  STRUCT 	
+   KSW7_ACT_DW00 : UDT 400;	// P97400 BusOut DW00 - 28: WC00 Controlbits 1
+   KSW7_ACT_DW04 : DINT;	// P97401 BusOut DW04 - 10: WC00 Abs
+   KSW7_ACT_DW08 : DINT;	// P97402 BusOut DW08 - 55: WC00 Istcharge
+   KSW7_ACT_DW12 : DINT;	// P97403 BusOut DW12 - 37: WC00 Dosiersollwert
+   KSW7_ACT_DW16 : DINT;	// P97404 BusOut DW16 - 46: WC00 Chargenschritt
+   KSW7_ACT_DW20 : UDT 400;	// P97405 BusOut DW20 - 29: WC10 Controlbits 1
+   KSW7_ACT_DW24 : DINT;	// P97406 BusOut DW24 - 11: WC10 Abs
+   KSW7_ACT_DW28 : DINT;	// P97407 BusOut DW28 - 56: WC10 Istcharge
+   KSW7_ACT_DW32 : DINT;	// P97408 BusOut DW32 - 38: WC10 Dosiersollwert
+   KSW7_ACT_DW36 : DINT;	// P97409 BusOut DW36 - 47: WC10 Chargenschritt
+   KSW7_ACT_DW40 : UDT 400;	// P97410 BusOut DW40 - 30: WC20 Controlbits 1
+   KSW7_ACT_DW44 : DINT;	// P97411 BusOut DW44 - 12: WC20 Abs
+   KSW7_ACT_DW48 : DINT;	// P97412 BusOut DW48 - 57: WC20 Istcharge
+   KSW7_ACT_DW52 : DINT;	// P97413 BusOut DW52 - 39: WC20 Dosiersollwert
+   KSW7_ACT_DW56 : DINT;	// P97414 BusOut DW56 - 48: WC20 Chargenschritt
+   KSW7_ACT_DW60 : DINT;	// P97415 BusOut DW60 - 00: ---
+   KSW7_ACT_DW64 : DINT;	// P97416 BusOut DW64 - 00: ---
+   KSW7_ACT_DW68 : DINT;	// P97417 BusOut DW68 - 00: ---
+   KSW7_ACT_DW72 : DINT;	// P97418 BusOut DW72 - 00: ---
+   KSW7_ACT_DW76 : DINT;	// P97419 BusOut DW76 - 00: ---
+
+  END_STRUCT ;	
+BEGIN
+END_DATA_BLOCK
+
+
+
+FUNCTION "COMM_KSW7" : VOID
+TITLE =    <DWC-7A / KUKLA DataExchange>
+//KNOW_HOW_PROTECT 
+AUTHOR : Ratzi
+FAMILY : com_dwc7
+NAME : fc_7A
+VERSION : 1.0
+
+
+VAR_INPUT
+  P97200_BusInDW00  : DINT ;	// SetValue DW00 to KSW-7
+  P97201_BusInDW04  : DINT ;	// SetValue DW04 to KSW-7
+  P97202_BusInDW08  : DINT ;	// SetValue DW08 to KSW-7
+  P97203_BusInDW12  : DINT ;	// SetValue DW12 to KSW-7
+  P97204_BusInDW16  : DINT ;	// SetValue DW16 to KSW-7
+  P97205_BusInDW20  : DINT ;	// SetValue DW20 to KSW-7
+  P97206_BusInDW24  : DINT ;	// SetValue DW24 to KSW-7
+  P97207_BusInDW28  : DINT ;	// SetValue DW28 to KSW-7
+  Adr_In            : INT ;	// HW-Manager Eingang/Input Area Baseaddress  
+  Adr_Out           : INT ;	// HW-Manager Ausgang/Qutput Area Baseaddress
+
+  
+END_VAR
+VAR_OUTPUT
+  P97400_BusOutDW00 : DINT ;	// ProcessValue DW00 from KSW-7  
+  P97401_BusOutDW04 : DINT ;	// ProcessValue DW04 from KSW-7  
+  P97402_BusOutDW08 : DINT ;	// ProcessValue DW08 from KSW-7  
+  P97403_BusOutDW12 : DINT ;	// ProcessValue DW12 from KSW-7  
+  P97404_BusOutDW16 : DINT ;	// ProcessValue DW16 from KSW-7  
+  P97405_BusOutDW20 : DINT ;	// ProcessValue DW20 from KSW-7  
+  P97406_BusOutDW24 : DINT ;	// ProcessValue DW24 from KSW-7  
+  P97407_BusOutDW28 : DINT ;	// ProcessValue DW28 from KSW-7  
+  P97408_BusOutDW32 : DINT ;	// ProcessValue DW32 from KSW-7  
+  P97409_BusOutDW36 : DINT ;	// ProcessValue DW36 from KSW-7  
+  P97410_BusOutDW40 : DINT ;	// ProcessValue DW40 from KSW-7  
+  P97411_BusOutDW44 : DINT ;	// ProcessValue DW44 from KSW-7  
+  P97412_BusOutDW48 : DINT ;	// ProcessValue DW48 from KSW-7  
+  P97413_BusOutDW52 : DINT ;	// ProcessValue DW52 from KSW-7  
+  P97414_BusOutDW56 : DINT ;	// ProcessValue DW56 from KSW-7  
+  P97415_BusOutDW60 : DINT ;	// ProcessValue DW60 from KSW-7  
+  bOnline : BOOL ;	// DWC-7 online signal
+END_VAR
+BEGIN
+NETWORK
+TITLE =   <Read Set-Values to DWC-7>
+
+ 
+      LAR1  P#P  0.0; 
+      L     #Adr_Out; 
+      SLW   3; 
+      +AR1  ; 
+      L     #P97200_BusInDW00; 
+      T     D [AR1,P#0.0]; 
+      L     #P97201_BusInDW04; 
+      T     D [AR1,P#4.0]; 
+      L     #P97202_BusInDW08; 
+      T     D [AR1,P#8.0]; 
+      L     #P97203_BusInDW12; 
+      T     D [AR1,P#12.0]; 
+      L     #P97204_BusInDW16; 
+      T     D [AR1,P#16.0]; 
+      L     #P97205_BusInDW20; 
+      T     D [AR1,P#20.0]; 
+      L     #P97206_BusInDW24; 
+      T     D [AR1,P#24.0]; 
+      L     #P97207_BusInDW28; 
+      T     D [AR1,P#28.0]; 
+
+
+NETWORK
+TITLE =   <Write current-Values to DWC-7>
+
+      LAR1  P#P  0.0; 
+      L     #Adr_In; 
+      SLW   3; 
+      +AR1  ; 
+
+      L     D [AR1,P#0.0]; 
+      T     #P97400_BusOutDW00; 
+      L     D [AR1,P#4.0]; 
+      T     #P97401_BusOutDW04; 
+      L     D [AR1,P#8.0]; 
+      T     #P97402_BusOutDW08; 
+      L     D [AR1,P#12.0]; 
+      T     #P97403_BusOutDW12; 
+      L     D [AR1,P#16.0]; 
+      T     #P97404_BusOutDW16; 
+      L     D [AR1,P#20.0]; 
+      T     #P97405_BusOutDW20; 
+      L     D [AR1,P#24.0]; 
+      T     #P97406_BusOutDW24; 
+      L     D [AR1,P#28.0]; 
+      T     #P97407_BusOutDW28; 
+      L     D [AR1,P#32.0]; 
+      T     #P97408_BusOutDW32; 
+      L     D [AR1,P#36.0]; 
+      T     #P97409_BusOutDW36; 
+      L     D [AR1,P#40.0]; 
+      T     #P97410_BusOutDW40; 
+      L     D [AR1,P#44.0]; 
+      T     #P97411_BusOutDW44; 
+      L     D [AR1,P#48.0]; 
+      T     #P97412_BusOutDW48; 
+      L     D [AR1,P#52.0]; 
+      T     #P97413_BusOutDW52; 
+      L     D [AR1,P#56.0]; 
+      T     #P97414_BusOutDW56; 
+      L     D [AR1,P#60.0]; 
+      T     #P97415_BusOutDW60; 
+
+
+NETWORK
+TITLE =   <Process Online by all Numbers unequal 0>
+
+      U     #bOnline; 
+      UN    #bOnline; 
+      =     #bOnline; 
+
+
+      L     #P97400_BusOutDW00; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97401_BusOutDW04; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97402_BusOutDW08; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97403_BusOutDW12; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97404_BusOutDW16; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97405_BusOutDW20; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97406_BusOutDW24; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97407_BusOutDW28; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97408_BusOutDW32; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97409_BusOutDW36; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97410_BusOutDW40; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97411_BusOutDW44; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97412_BusOutDW48; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97413_BusOutDW52; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97414_BusOutDW56; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+      L     #P97415_BusOutDW60; 
+      L     L#0; 
+      <>D   ; 
+      O     #bOnline; 
+      =     #bOnline; 
+
+END_FUNCTION
+

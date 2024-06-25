@@ -1,0 +1,799 @@
+$ EZ-EDS Version 3.9 Generated Electronic Data Sheet
+
+$ ==========================================================================
+$ Ethernet/IP EDS file for B&R interface X20IF10D3-1 (adapter "slave" device)
+$  
+$ Corporate Headquarters:
+$  
+$ Bernecker & Rainer Industrie-Elektronik Ges.m.b.H.
+$ A-5142 Eggelsberg
+$ B&R Straße 1
+$ AUSTRIA
+$  
+$ www.br-automation.com
+$  
+$ ==========================================================================
+
+$ ==========================================================================
+$ 	Changelog													/ dd-mm-yyyy
+$  
+$ 	V 1.00 -> Initial release, B&R								/ 30-08-2011
+$ 	V 1.01 -> Change max. cyclic IO Data Size to 504 Bytes		/ 08-05-2015
+$ 	V 1.35 -> MinRev changed from 19 to 35                      / 17-02-2017
+$ ==========================================================================
+
+
+[File]
+        DescText = "EDS file for X20IF10D3-1";
+        CreateDate = 08-30-2011;
+        CreateTime = 09:02:10;
+        ModDate = 02-17-2017;
+        ModTime = 10:01:11;
+        Revision = 1.35;
+
+[Device]
+        VendCode = 887;
+        VendName = "Bernecker + Rainer Industrie-Elektronik GmbH";
+        ProdType = 12;
+        ProdTypeStr = "Communications Adapter";
+        ProdCode = 42780;
+        MajRev = 1;
+        MinRev = 35;
+        ProdName = "X20IF10D3-1";
+        Catalog = "X20IF10D3-1";
+        Icon = "BRX20IF.ico";
+        IconContents =
+                "AAABAAEAQEAQAAEABABoCgAAFgAAACgAAABAAAAAgAAAAAEABAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAA"
+                "gICAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAMDAwAD///8A////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////8AAAAAAAAAAAAAAAAAAAAAAAD///////d3d35z7///8KinqK"
+                "eop6inqKeop6inqKeopw//////90c3d3R3///w6gAAAAAAB4AAeGoQo3pQAA"
+                "DqD//////wc1Y3cDD///CgAAAGinADcABaCkCHqDAAAAgP//////B3Z3VhR/"
+                "//8IAAAAjopwigATh4IKiqUAAACg//////4XFzZ3A3///woAAACnqoA3Bxc0"
+                "oQincwAAAKD//////gZ2dXFwb///DgAAAIqOgDgjcTQ3DjqHAAAAgP/////3"
+                "FzUnMENf//8KAAAAh3owc0dXN4MIqKMAAACg//////JHZ3d0MH///wgAAAB6"
+                "ioeHPjijoQqOpQAAAKD/////cTcXJTBhf///CgAAAHinc3g+43g1COqDAAAA"
+                "cP/////hZXZ3cHB///8OAAAANzhDqoeHPqEDqHMAAACg/////+A3NXNwB3//"
+                "/woAAAAAADPoeuqKhzAAAAAAB4D/////dHdnZwUlL///CAAAAHM3E4qKiqeh"
+                "UAAAeqggoP////91YTU3BhB///8KAAAAOOg0PqeuiocAAACOinCg/////gc3"
+                "d3ZwFn///w4AAAB6p4caiop6gwAAAKiocID////+J1ZxdSQw7///CgAAAI6K"
+                "gHinp6inAAAArq6AoP////4FdzZyUhR///8IAAAAOo4weoeKjqEAAACKijCg"
+                "////93NlNXQ0IX///woAAACHqnA4eq6opAAAAHqKcHD////3d3d3dyAW7///"
+                "DgAAAHFxAHqHioqCAAAAFzUQoP////MAAAB1BwHv//8IoAAAAAAKinqnrqcA"
+                "AAAAAAqA////9WBxAHIWFu///w44c3h4OHeoqKioqHgzh4eHN6D////0FnIU"
+                "cANB7///8AAAAAAAAAAAAAAAAAAAAAAAD////+IAEABxYULv////////////"
+                "////////////////////5QJAFnBhJe//////////////////////////////"
+                "///iB+FgNDBS7///////cP//9w7gAAAP/3AA7////////+UAcBBDBhT/////"
+                "///wf//g7+Du7u/3B3cP////////8AEAADBhB/////////4H/wfv/gf///Dv"
+                "/g7////////jAAAAQSUn/////////+DuDv//8H//4O//d////////+QEMAAw"
+                "cAf/////////8HB/////B//g//8O////////MwEAEENDQ//////////+B///"
+                "///gf+D//wf////////kBhYANDQH//////////Bwf/////d/4P//d///////"
+                "/zd3d3cSBwf/////////4OcO//Dv/g/wf/8H////////d3cFNHBhDv//////"
+                "//4O/wf/8H/3D/B+9w/////////3MHJxdBYX////////8O//8H/3AADv/wAA"
+                "7//////////nRxJHUg7////////n7//+f//+/////u/////////////n4zMO"
+                "7//////////////////////////////////////3h+//////////////////"
+                "//////////////////////5+7///////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "////////////////////////////////////////////////////////////"
+                "//////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+
+
+[Device Classification]
+        Class1 = EtherNetIP;
+
+
+[Params]
+        Param1 =
+                0,
+                ,,
+                0x0000,
+                0xC7,
+                2,
+                "Assembly Output Size",
+                "",
+                "",
+                0,504,32,
+                ,,,,
+                ,,,,
+                0;
+
+        Param2 =
+                0,
+                ,,
+                0x0000,
+                0xC7,
+                2,
+                "Assembly Input Size",
+                "",
+                "",
+                0,504,32,
+                ,,,,
+                ,,,,
+                0;
+
+        Param3 =
+                0,
+                ,,
+                0x0010,
+                0xC7,
+                2,
+                "Input Data",
+                "",
+                "",
+                0,255,0,
+                ,,,,
+                ,,,,
+                0;
+        Param4 =
+                0,
+                ,,
+                0x0000,
+                0xC7,
+                2,
+                "Output Data",
+                "",
+                "",
+                0,255,0,
+                ,,,,
+                ,,,,
+                0;
+
+        Param5 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Input_CP",             $ name
+                "",                     $ units
+                "Input Connection Point",    $ help string
+                101,101,101,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param6 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Output_CP",            $ name
+                "",                     $ units
+                "Output Connection Point",    $ help string
+                100,100,100,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param7 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "InputOnly_CP",         $ name
+                "",                     $ units
+                "Input Only Connection Point",    $ help string
+                193,193,193,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param8 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "ListenOnly_CP",        $ name
+                "",                     $ units
+                "Listen Only Connection Point",    $ help string
+                192,192,192,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+[Assembly]
+        Assem100 =
+                "Bytes Out",
+                ,
+                504,
+                0x0000,
+                ,,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+				16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4;
+
+        Assem101 =
+                "Bytes In",
+                ,
+                504,
+                0x0000,
+                ,,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+				16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3;
+
+[Connection Manager]
+        Connection1 =
+                0x04010002,             $ Trigger and Transport
+                0x44644405,             $ Point Multicast
+                ,Param1,Assem100,       $ OT RPI Size format
+                ,Param2,Assem101,       $ TO rpi size format
+                ,,                      $ config 1
+                ,,                      $ config 2
+                "Exclusive Owner ",     $ connection name
+                "",                     $ help string
+                "20 04 24 01 2C [Param6] 2C [Param5]";    $ path
+
+        Connection2 =
+                0x01010002,             $ Trigger and Transport
+                0x44244305,             $ Point Multicast
+                ,0,,                    $ OT RPI Size format
+                ,Param2,Assem101,       $ TO rpi size format
+                ,,                      $ config 1
+                ,,                      $ config 2
+                "Listen only",          $ connection name
+                "",                     $ help string
+                "20 04 24 01 2C [Param8] 2C [Param5]";    $ path
+
+        Connection3 =
+                0x02010002,             $ Trigger and Transport
+                0x44244305,             $ Point Multicast
+                ,0,,                    $ OT RPI Size format
+                ,Param2,Assem101,       $ TO rpi size format
+                ,,                      $ config 1
+                ,,                      $ config 2
+                "Input Only",           $ connection name
+                "",                     $ help string
+                "20 04 24 01 2C [Param7] 2C [Param5]";    $ path
+
+[Capacity]
+
+        ConnOverhead = .004;            $ Connection Overhead
+
+        MaxIOConnections = 3;           $ Maximum number of Class 1 Connections
+        MaxMsgConnections = 6;          $ Maximum number of Class 3 Connections
+        TSpec1 = TxRx, 10, 4000;        $ packets per sec @ 10 bytes
+        TSpec2 = TxRx, 504, 3000;       $ packets per sec @ 504 bytes
+
+[DLR Class]
+        Revision = 2;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Ethernet Link Class]
+        Revision = 3;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        InterfaceLabel1 = "port1";
+        InterfaceLabel2 = "port2";
+
+$ ****************************************************************************
+$ EOF
+$ ****************************************************************************
